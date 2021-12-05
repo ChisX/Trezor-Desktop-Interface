@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcane Trezor-Desktop Interface</title>
+
+  <!-- Styles -->
+  <link rel="shortcut icon" href="./images/appIcon.ico" type="image/x-icon" />
+  <link rel="stylesheet"    href="./global.css">
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="https://connect.trezor.io/8/trezor-connect.js"></script>
+  <script src="scripts/neutralino.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <section class="trezor">
+    <!-- Coin Selection -->
+    <div class="coin-select">
+      <header>Select Your Crypto</header>
+      <div class="select-cont">
+        <div class="sheen"></div>
+        <select name="coin" id="coin">
+          <option value='btc'>Bitcoin</option>
+          <option value='bch'>Bitcoin Cash</option>
+          <option value='eth'>Ethereum</option>
+          <option value='dgc'>Dogecoin</option>
+          <option value='ltc'>Litecoin</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Log Area -->
+    <textarea id="log" contenteditable="false" readonly></textarea>
+    
+    <!-- Action Selection -->
+    <div class="btn-group">
+      <button id="get-pubkey">Get Public Key</button>
+      <button id="get-address">Get Address</button>
+      <button id="sign-tx">Sign Transaction</button>
+      <div class="inp-group">
+        <input type="text" id="tx-amount" placeholder="Transaction Amount">
+        <input type="text" id="tx-target" placeholder="Destination Address">
+      </div>
+    </div>
+
+    <footer>
+      <u><i><h2>You can reach the Arcane Development Team for feedback/criticism/questions @</h2></i></u>
+      <ul>
+        <li>
+          <div>
+            <a href="https://twitter.com/" class="media">Twitter</a>
+            <a href="https://twitter.com/" class="url">https://twitter.com/</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="https://www.facebook.com/" class="media">Facebook</a>
+            <a href="https://www.facebook.com/" class="url">https://www.facebook.com/</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="https://www.linkedin.com/" class="media">LinkedIn</a>
+            <a href="https://www.linkedin.com/" class="url">https://www.linkedin.com/</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="https://reddit.com/" class="media">Reddit</a>
+            <a href="https://reddit.com/" class="url">https://reddit.com/</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="https://github.com/ArcaneTechnologies" class="media">Github</a>
+            <a href="https://github.com/ArcaneTechnologies" class="url">https://github.com/ArcaneTechnologies</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="https://mail.google.com/mail/u/0/" class="media">Gmail</a>
+            <a href="https://mail.google.com/mail/u/0/" class="url">https://mail.google.com/mail/u/0/</a>
+          </div>
+        </li>
+      </ul>
+    </footer>
+  </section>
+</body>
+</html>

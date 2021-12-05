@@ -1,0 +1,36 @@
+{
+  "applicationId": "arcane.trezor.desktop",
+  "port": 0,
+  "defaultMode": "browser",
+  "enableHTTPServer": true,
+  "enableNativeAPI": true,
+  "url": "/src/",
+  "nativeBlockList": [],
+  "globalVariables": {
+    "TEST": "Test Value"
+  },
+  "modes": {
+    "window": {
+      "title": "trezor-desktop",
+      "width": 800,
+      "height": 500,
+      "minWidth": 400,
+      "minHeight": 250,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/src/images/appIcon.png",
+      "enableInspector": true,
+      "borderless": false,
+      "maximize": false
+    },
+    "browser": {},
+    "cloud": {}
+  },
+  "cli": {
+    "binaryName": "trezor-desktop",
+    "resourcesPath": "/src/",
+    "clientLibrary": "/src/scripts/neutralino.js",
+    "binaryVersion": "2.6.0",
+    "clientVersion": "1.3.0"
+  }
+}

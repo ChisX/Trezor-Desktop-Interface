@@ -1,0 +1,298 @@
+/* --- Font Imports --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+  /* --- CSS Palette --- */
+  --clr-A1: hsl(205, 86%,  17%);
+  --clr-A2: hsl(205, 77%,  27%);
+  --clr-A3: hsl(205, 72%,  37%);
+  --clr-A4: hsl(205, 63%,  48%);
+  --clr-A5: hsl(205, 89%,  70%);
+  --clr-A6: hsl(205, 90%,  76%);
+  --clr-A7: hsl(205, 86%,  81%);
+
+  --clr-B1: hsl(330, 73%,  19%);
+  --clr-B2: hsl(330, 77%,  27%);
+  --clr-B3: hsl(330, 72%,  37%);
+  --clr-B4: hsl(330, 63%,  48%);
+  --clr-B5: hsl(330, 89%,  70%);
+  --clr-B6: hsl(330, 90%,  76%);
+  --clr-B7: hsl(330, 86%,  81%);
+  --clr-B8: hsl(330, 90%,  88%);
+
+  --clr-C1: hsl(157, 70%,  19%);
+  --clr-C2: hsl(157, 70%,  29%);
+  --clr-C3: hsl(157, 77%,  39%);
+  --clr-C4: hsl(157, 72%,  49%);
+  --clr-C5: hsl(157, 63%,  59%);
+  --clr-C6: hsl(157, 89%,  69%);
+
+  --clr-D1: hsl(41,100%, 25%);
+  --clr-D2: hsl(41,100%, 35%);
+  --clr-D3: hsl(41,100%, 45%);
+  --clr-D4: hsl(41,100%, 55%);
+  --clr-D5: hsl(41,100%, 65%);
+  --clr-D6: hsl(41,100%, 75%);
+  
+  --clr-E1: hsl(209, 61%, 16%);
+  --clr-E2: hsl(211, 39%, 23%);
+  --clr-E3: hsl(209, 34%, 30%);
+  --clr-E4: hsl(209, 28%, 39%);
+  --clr-E5: hsl(210, 22%, 49%);
+  --clr-E6: hsl(209, 23%, 60%);
+  --clr-E7: hsl(211, 27%, 70%);
+  --clr-E8: hsl(210, 31%, 80%);
+
+  --clr-F1: hsl(261, 67%, 10%);
+  --clr-F2: hsl(261, 67%, 20%);
+  --clr-F3: hsl(261, 67%, 30%);
+  --clr-F4: hsl(261, 67%, 40%);
+  --clr-F5: hsl(261, 67%, 50%);
+  --clr-F6: hsl(261, 67%, 60%);
+
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-blue-dark: hsl(207, 100%, 13%);
+  --clr-blue-light: hsl(207, 100%, 63%);
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(154, 100%, 27%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  
+  /* --- CSS Fonts --- */
+  --ff1: 'Times New Roman', Times, serif;
+  --ff2: monospace;
+  --ff3: 'Rubik', sans-serif;
+  --ff4: 'Zen Dots', cursive;
+  --ff5: 'Indie Flower', cursive;
+  --ff6: 'Lobster', cursive;
+  --ff7: 'Dancing Script', cursive;
+  font-size: 62.5%;
+}
+
+
+/* --------- Static Web Design --------- */
+*,*::before,*::after {
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  margin: 0; padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  font-size: 1.4rem;
+  
+  font-family: var(--ff1);
+  background-color: var(--clr-black);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+a   { text-decoration: none; }
+img { display: block; }
+
+section.trezor {
+  width: 100%;
+  height: 100vh;
+  
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  color: var(--clr-black);
+}
+
+/* SECTION 1 : COIN SELECTION */
+.trezor .coin-select {
+  width: calc(100% - 2px);
+  height: 100px;
+  margin-top: 1px;
+
+  background: repeating-linear-gradient(30deg,#ccc 50%,#fff);
+  border: 1px solid #0005;
+  color: black;
+}
+
+.trezor .coin-select header {
+  font-size: 3rem;
+  margin: 10px;
+
+  font-family: var(--ff4);
+  text-decoration: underline;
+  position: relative;
+}
+
+.trezor .coin-select .select-cont {
+  width: 200px;
+  height: 20px;
+  margin: auto;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.trezor .coin-select .select-cont .sheen {
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(45deg,#ccc,hsl(157,77%,39%,0));
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  content: '';
+  z-index: 1;
+}
+
+.trezor .coin-select .select-cont  select {
+  width: 100%;
+  height: 100%;
+  text-indent: 8px;
+
+  background: #fff5;
+  text-align: center;
+  font-family: var(--ff1);
+  border-radius: 10px;
+  border: 1px solid #000;
+  position: relative;
+  z-index: 2;
+  box-shadow: inset +1px +1px 6px #2225,
+              inset +1px -1px 6px #2225,
+              -1px -1px 6px #2225,
+              -1px +1px 6px #2225;
+}
+
+/* SECTION 2 : LOGGING AREA */
+.trezor textarea {
+  width: calc(100% - 2px);
+  min-height: 250px;
+
+  resize: none;
+  outline: none;
+}
+
+/* SECTION 3 : ACTION SELECTION */
+.trezor .btn-group {
+  width: calc(100% - 2px);
+  height: 50px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #0005;
+}
+
+.trezor .btn-group button {
+  width: 150px;
+  height: 30px;
+  font-size: 1.6rem;
+
+  cursor: pointer;
+  font-family: var(--ff7);
+}
+
+.trezor .btn-group .inp-group {
+  width: 300px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trezor .btn-group .inp-group input {
+  width: 100%;
+  text-indent: 5px;
+}
+
+/* SECTION 4 : PAGE FOOTER */
+.trezor footer {
+  width: calc(100% - 2px);
+  height: calc(100% - 400px - 2px);
+  display: block;
+  border: 1px solid #0005;
+}
+
+.trezor footer h2 {
+  font-size: 1.8rem;
+}
+
+.trezor footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.trezor footer ul li {
+  width: 100%;
+  height: 30px;
+  text-indent: 40px;
+  position: relative;
+}
+
+.trezor footer ul li div {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 0.20fr 1fr;
+}
+
+.trezor footer ul li div a {
+  font-weight: bold;
+  font-family: var(--ff2);
+  text-decoration: underline;
+  color: var(--clr-black);
+}
+
+.trezor footer ul li div a:visited {
+  color: var(--clr-C2);
+}
+
+.trezor footer ul li::before {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  left: -30px;
+}
+
+.trezor footer ul li:nth-child(1)::before {content: url('./images/brand-twitter.svg');}
+.trezor footer ul li:nth-child(2)::before {content: url('./images/brand-facebook.svg');}
+.trezor footer ul li:nth-child(3)::before {content: url('./images/brand-linkedin.svg');}
+.trezor footer ul li:nth-child(4)::before {content: url('./images/brand-reddit.svg');}
+.trezor footer ul li:nth-child(5)::before {content: url('./images/brand-github.svg');}
+.trezor footer ul li:nth-child(6)::before {content: url('./images/brand-gmail.svg');}
+
+
+/* --------- Dynamic Web Design --------- */
+.sheen.active {
+  animation: 1s sheen ease forwards;
+}
+
+@keyframes sheen {
+  000% {
+    background: linear-gradient(45deg,#ccc5,hsl(157,77%,39%,1));
+    left: -100%;
+  }
+  100% {
+    background: linear-gradient(45deg,#ccc5,hsl(157,77%,39%,1));
+    left: +100%;
+  }
+}
